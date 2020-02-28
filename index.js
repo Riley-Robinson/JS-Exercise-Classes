@@ -137,10 +137,12 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor extends Lambdasian{
+class Instructor extends Lambdasian {
   constructor(oBj){
-    super(oBj);
-    this.
+   super(oBj)
+      this.specialty = oBj.specialty;
+      this.favLanguage = oBj.favLanguage;
+      this.catchPhtase = oBj.catchPhrase;
 }
 
 /*
