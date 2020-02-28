@@ -40,9 +40,29 @@ class Airplane {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-class Person {
 
-}
+class Person { 
+  constructor(name,age){
+        this.name =name,
+        this.age = age,
+        this.stomach = []
+    }
+  eat(goodFood){
+        if (this.stomach.length < 10){
+         return this.stomach.push(goodFood);
+      };
+    };
+  poop(){
+        this.stomach = [];
+      }
+  toString() {
+          return `${this.name} and ${this.age}`;
+      }
+    }
+
+const Neo = new Person('name','age');
+  
+  console.log(Neo.toString());
 
 /*
   TASK 2
@@ -59,8 +79,25 @@ class Person {
 */
 
 class Car {
-
-}
+  constructor( model, milesPerGallon){
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+     }
+    fill(dinojuice){
+        this.tank += dinojuice;
+    };
+    drive(distance){
+      if(this.tank - distance/this.milesPerGallon < 0) {
+        this.odometer += this.tank * this.milesPerGallon
+        this.tank = 0
+      return `i ran out of fuel at ${this.odometer}!`
+      }
+        this.odometer = this.odometer + distance;
+        this.tank -= distance / this.milesPerGallon;
+      };
+  }
 
 /*
   TASK 3
@@ -75,8 +112,16 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(oBj){
+    this.name = oBj.name;
+    this. age = oBj.age;
+    this.location = oBj.location; 
+  }
+    speak(){
+      return `Hello my name is ${this.name}, I am from ${this.location}`
+    }
 }
+
 
 /*
   TASK 4
@@ -93,7 +138,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor {
-
+  constructor(objects){
+    this.name = objects.name;
+    this. age = objects.age;
+    this.location = objects.location; 
+  }
 }
 
 /*
